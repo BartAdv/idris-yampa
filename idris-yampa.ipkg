@@ -1,0 +1,8 @@
+package yampa
+
+modules = Descriptors
+  , Core
+  , Primitives
+  , Executer
+
+pkgs = bifunctors
