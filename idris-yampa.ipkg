@@ -4,5 +4,10 @@ modules = Descriptors
   , Core
   , Primitives
   , Executer
+  , Tests
 
 pkgs = bifunctors
+
+tests = Tests.basics
+      , Tests.comp
+

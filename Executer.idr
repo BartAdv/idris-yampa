@@ -1,10 +1,12 @@
 module Executer
-
+       
 import Core
 import Evaluator
 import Data.Vect
 
 import Primitives
+
+%access public export
 
 -- Run a signal function over a finite amount of predetermined input
 runSF : Vect n (SVRep as, DTime) -> SF as bs d -> (SF as bs d, Vect n (SVRep bs))

@@ -88,3 +88,9 @@ sfNil = sfSink
 
 time : SF as [C Time] Decoupled
 time = mkSource (\dt, s => let s' = s + dt in (s', [s'])) t0
+
+-- TODO: VectorSpace?
+integral : SF [C Double] [C Double] Causal
+integral = Prim integralAux t0
+  where
+    integralAux dt st [a] = let s' = st + dt * a in (s', [s'])
